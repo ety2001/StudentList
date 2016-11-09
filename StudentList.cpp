@@ -10,6 +10,7 @@
 #include <string>
 #include <string.h>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -104,7 +105,7 @@ void printentries(vector<Student*> *list){
 	}
 	else{
 		for(int i = 0; i < list->size(); i++){
-		cout << list->at(i)->first << " " << list->at(i)->last << ", " << list->at(i)->id << ", " << list->at(i)->gpa << endl;
+		cout << list->at(i)->first << " " << list->at(i)->last << ", " << list->at(i)->id << ", " << setprecision (2) << fixed << list->at(i)->gpa << endl;
 		}
 	}
 }
